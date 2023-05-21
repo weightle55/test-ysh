@@ -28,6 +28,12 @@
 * git merge 브랜치이름 : 해당 브랜치를 현재 브랜치로 병합
 
 
+## 작업 초기 설정
+* 로컬 작업할 디렉토리를 생성 
+* cd 디렉토리 이동
+* git clone 깃저장소http값 -> 로그인(깃 연결)
+* git checkout dev
+
 ## 작업 순서
 * git checkout dev
 * git pull
