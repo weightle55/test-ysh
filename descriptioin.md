@@ -3,6 +3,7 @@
 ## 용어정리
 * git : 형상관리툴
 * remote / local : 원격 형상 / 내 로컬 컴퓨터 형상
+* clone : 저장소 복제
 * branch : 버전(형상) 단위
 * commit : 로컬 저장 명령어 (항상 코멘트를 작성해야함)
 * push : 로컬 to 리모트 반영
@@ -10,7 +11,7 @@
 * checkout : 브랜치 이동
 * merge : 브랜치 간의 병합 (업데이트)
 * pull request : 리모트에 merge 요청 (내 작업을 최종 반영 요청)
-* clone : 저장소 복제 
+ 
 
 ## 명령어 정리 
 * git branch : 브랜치 목록 조회
@@ -35,17 +36,29 @@
 * git checkout dev
 
 ## 작업 순서
-* git checkout dev
-* git pull
-* git branch 본인이작업할브랜치 생성 
-* git checkout 본인작업브랜치
-* git merge 
----작업 진행
+* 작업 전 
+```
+git checkout dev
+git pull
+git branch 본인이작업할브랜치 생성 EX:feature/영어로함수명(작업명) 
+git checkout 본인작업브랜치
+git merge dev 
+```
 
----작업 후
-* git add .
-* git commit -m "코멘트"
-* git checkout dev
-* git merge 본인작업브랜치
-* git push 
+* 작업 후
+```
+git add .
+git commit -m "코멘트"
+```
 
+if 본인 작업이 완료되기 전이라면 
+```
+git push 
+```
+if 모두 작업을 완료했다면 
+```
+git checkout dev
+git merge 본인작업브랜치
+git push 
+git branch -d 본인작업브랜치
+```
