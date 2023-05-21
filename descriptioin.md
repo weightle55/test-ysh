@@ -37,6 +37,7 @@
 ## 작업 순서
 * git checkout dev
 * git pull
+* git branch 본인이작업할브랜치 생성 
 * git checkout 본인작업브랜치
 * git merge 
 ---작업 진행
